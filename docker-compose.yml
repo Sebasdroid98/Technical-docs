@@ -29,7 +29,7 @@ services:
     networks:
       - laravel_network
     environment:
-      - APIREST_URL=laravel_api  # URL directa al servicio de la API
+      - APIREST_URL=laravel_api
     ports:
       - "8080:80"
 
