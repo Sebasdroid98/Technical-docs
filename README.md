@@ -26,6 +26,7 @@ Repositorio para indicar todo el proceso de instalación del conjunto de api, cl
 
 ## Configuración de "laravel_client"
  - [ ] Accede a la carpeta "laravel_client".
+ - [ ] Extrae el archivo "storage.zip".
  - [ ] Haz una copia del archivo ".env.example" y renombralo como ".env".
  - [ ] Ahora configura las siguiente variables:
  - [ ] APP_NAME=LaravelClient
@@ -36,6 +37,7 @@ Repositorio para indicar todo el proceso de instalación del conjunto de api, cl
 
 ## Configuración de "laravel_api"
  - [ ] Accede a la carpeta "laravel_api".
+ - [ ] Extrae el archivo "storage.zip".
  - [ ] Haz una copia del archivo ".env.example" y renombralo como ".env".
  - [ ] Ahora configura las siguiente variables:
  - [ ] APP_NAME=LaravelApi
