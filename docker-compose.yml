@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ./laravel-api
+    container_name: laravel_api
+    volumes:
+      - ./laravel-api:/var/www/html
+    networks:
+      - laravel_network
+    environment:
+      - APP_ENV=local
+      - DB_HOST=db
+      - DB_DATABASE=laravel
+      - DB_USERNAME=laravel
+      - DB_PASSWORD=laravel
+    ports:
+      - "8081:80"
+    depends_on:
+      - db
+
+  client:
+    build:
+      context: ./laravel-client
+    container_name: laravel_client
+    volumes:
+      - ./laravel-client:/var/www/html
+    networks:
+      - laravel_network
+    environment:
+      - APIREST_URL=laravel_api  # URL directa al servicio de la API
+    ports:
+      - "8080:80"
+
+  db:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: laravel
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - laravel_network
+
+networks:
+  laravel_network:
+    driver: bridge
+
+volumes:
+  db_data:
