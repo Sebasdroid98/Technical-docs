@@ -4,6 +4,7 @@ Repositorio para indicar todo el proceso de instalación del conjunto de api, cl
 ## Recomendaciones
  - [ ] Debes tener docker instalado en tu computador.
  - [ ] Asegurate de que docker está en ejecución.
+ - [ ] Asegurate de usar las ramas "main" de cada repositorio.
 
 ## Descarga de recursos
  - [ ] Descarga este repositorio.
@@ -56,6 +57,7 @@ Repositorio para indicar todo el proceso de instalación del conjunto de api, cl
  - [ ] Después de que terminen de configurarse los proyectos, los enlaces quedaran asignados asi:
  - [ ] CLIENTE = "http://localhost:8080/public/".
  - [ ] API     = "http://localhost:8081/public/".
+ - [ ] Para ejecutar las migraciones accede a la la API (http://localhost:8081/public/) y accede a la ruta "run-migrations" o presiona en el enlace que dice "Ejecutar-migraciones".
 
 # Funcionalidades
 
